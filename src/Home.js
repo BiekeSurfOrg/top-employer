@@ -10,9 +10,9 @@ const Home = () => {
             </video>
             <div className="full-screen layout">
                 <div className='tile-list'>
-                    <Card text='Cyber Fraude Test' route='/questions?type=cybercrime' />
-                    <Card text='Financiële Kennis Test' route='/questions?type=financieel' />
-                    <Card text='Ondernemen Kennis Test' route='/questions?type=ondernemen' />
+                    <Card text='Cyber Fraude Test' route='/questions' />
+                    <Card text='Financiële Kennis Test' route='/top-employer-game' />
+                    <Card text='Ondernemen Kennis Test' route='/questions' />
                 </div>
             </div>
         </div>

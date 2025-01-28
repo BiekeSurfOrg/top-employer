@@ -204,3 +204,19 @@
   height: 100%;
   object-fit: cover;
 }
+
+.top-employer-button {
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 50px;
+}
+
+.awards-found {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}

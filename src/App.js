@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import QuestionList from './QuestionList';
 import Home from './Home';
-import Results from './Results';
+import TopEmployerGame from './TopEmployerGame';
 
 function App() {
   return (
@@ -12,9 +11,9 @@ function App() {
         <div className="App-layout">
           <div>
             <Routes>
-              <Route path="/questions" element={<QuestionList />} />
+              <Route path="/top-employer-game" element={<TopEmployerGame />} />
               <Route path="/" element={<Home />} />
-              <Route path="/result" element={<Results />} />
+              <Route path="/result" />
             </Routes>
           </div>
         </div>
