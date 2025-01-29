@@ -1,8 +1,18 @@
 import React from 'react';
-const buttons = [{ a: 1375, b: 590 }, { a: 270, b: 1800 }, { a: 270, b: 2250 }, { a: 1740, b: 1440 }, { a: 500, b: 700 }];
+import { useRouteChange } from './navigation';
+const buttons = [{ a: 1375, b: 590 }, { a: 270, b: 1800 }, { a: 270, b: 2250 }, { a: 1740, b: 1440 }, { a: 1910, b: 850 }];
 const TopEmployerGame = () => {
     const [awardsFround, setAwardsFound] = React.useState([false, false, false, false, false]);
     console.log(awardsFround);
+    const routeChange = useRouteChange();
+    const refreshscore = () => {
+        setAwardsFound([false, false, false, false, false]);
+        const buttons = document.getElementsByClassName('top-employer-button');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.border = 'none';
+            buttons[i].disabled = false;
+        }
+    };
     const foundAward = (index) => {
         const nextFlase = awardsFround.indexOf((false));
         if (nextFlase === -1) {
@@ -12,10 +22,10 @@ const TopEmployerGame = () => {
         setAwardsFound(awardsFround.map((award, index) => index <= nextFlase ? awardsFround[index] = true : false));
         const countTrue = awardsFround.filter(award => award).length;
         if (countTrue === 5) {
-            alert('You found all the awards');
+            routeChange('/win-page');
         }
         const currentButton = document.getElementById(index);
-        currentButton.style.border = '4px solid red';
+        currentButton.style.border = '10px solid red';
         currentButton.disabled = true;
     }
     return (
@@ -24,12 +34,11 @@ const TopEmployerGame = () => {
             <h1>Top Employer Game</h1>
             <div className='z-index-1'>
                 <div className='award-found-container'>
-                    <p>back</p>
+                    <img className='action-icon' src='../assets/action-func-chevron-left.png' onClick={() => routeChange("/")} />
                     <div className='awards-found'>
                         {awardsFround.map((award, index) => (<img key={index} className='award-image' src={`../assets/${award ? 'red' : 'grey'}_logo.png`} alt="award" />))}
                     </div>
-                    <p>refresh
-                    </p>
+                    <img className='action-icon' src='../assets/refresh-1024-738176988.png' onClick={() => refreshscore()} />
                 </div>
                 <div className="position-relative">
                     {buttons.map((button, index) => (

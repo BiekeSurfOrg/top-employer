@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import TopEmployerGame from './TopEmployerGame';
+import WinPage from './WinPage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <div>
             <Routes>
               <Route path="/top-employer-game" element={<TopEmployerGame />} />
+              <Route path="/win-page" element={<WinPage />} />
               <Route path="/" element={<Home />} />
               <Route path="/result" />
             </Routes>

@@ -193,7 +193,7 @@
 }
 
 .top-employer-button {
-  border: 5px solid red;
+  border: none;
   position: absolute;
   border-radius: 50%;
   background-color: transparent;
@@ -222,4 +222,13 @@
 .z-index-1 {
   position: relative;
   z-index: 1;
+}
+
+#root {
+  height: 3840px;
+  width: 2160px;
+}
+
+.action-icon {
+  height: 100px;
 }
