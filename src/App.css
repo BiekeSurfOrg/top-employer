@@ -233,3 +233,21 @@
 .action-icon {
   height: 100px;
 }
+
+.video-back-button {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border-radius: 5px;
+  padding: 20px 40px;
+  margin: 20px;
+  z-index: 1;
+}
+
+.image-back-button {
+  position: absolute;
+  top: 1450px;
+  left: 150px;
+  margin: 20px;
+  z-index: 1;
+}

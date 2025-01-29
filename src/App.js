@@ -4,6 +4,8 @@ import './App.css';
 import Home from './Home';
 import TopEmployerGame from './TopEmployerGame';
 import WinPage from './WinPage';
+import FullScreenVideo from './FullScreenVideo';
+import FullScreenImage from './FullScreenImage';
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
               <Route path="/top-employer-game" element={<TopEmployerGame />} />
               <Route path="/win-page" element={<WinPage />} />
               <Route path="/" element={<Home />} />
-              <Route path="/result" />
+              <Route path="/full-screen-video" element={<FullScreenVideo />} />
+              <Route path="/full-screen-image" element={<FullScreenImage />} />
             </Routes>
           </div>
         </div>
