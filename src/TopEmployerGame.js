@@ -1,5 +1,5 @@
 import React from 'react';
-const buttons = [{ a: 100, b: 200 }, { a: 200, b: 300 }, { a: 150, b: 350 }, { a: 300, b: 300 }, { a: 500, b: 700 }];
+const buttons = [{ a: 1375, b: 590 }, { a: 270, b: 1800 }, { a: 270, b: 2250 }, { a: 1740, b: 1440 }, { a: 500, b: 700 }];
 const TopEmployerGame = () => {
     const [awardsFround, setAwardsFound] = React.useState([false, false, false, false, false]);
     console.log(awardsFround);
@@ -19,18 +19,25 @@ const TopEmployerGame = () => {
         currentButton.disabled = true;
     }
     return (
-        <div className='full-screen'>
-
+        <div className='full-screen position-relative'>
+            <img src='../assets/Topemployer-search.jpg' className='background-video'></img>
             <h1>Top Employer Game</h1>
-            <div className='awards-found'>
-                {awardsFround.map((award, index) => (<p key={index}> {index + 1} {award ? 'yes' : 'no'}</p>))}
-            </div>
-            <div className="position-relative">
-                {buttons.map((button, index) => (
-                    <button onClick={() => foundAward(index)} className='top-employer-button' key={index} id={index} style={{ left: button.a, top: button.b }}>
+            <div className='z-index-1'>
+                <div className='award-found-container'>
+                    <p>back</p>
+                    <div className='awards-found'>
+                        {awardsFround.map((award, index) => (<img key={index} className='award-image' src={`../assets/${award ? 'red' : 'grey'}_logo.png`} alt="award" />))}
+                    </div>
+                    <p>refresh
+                    </p>
+                </div>
+                <div className="position-relative">
+                    {buttons.map((button, index) => (
+                        <button onClick={() => foundAward(index)} className='top-employer-button' key={index} id={index} style={{ left: button.a, top: button.b }}>
 
-                    </button>
-                ))}
+                        </button>
+                    ))}
+                </div>
             </div>
         </div>
     );

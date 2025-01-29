@@ -7,7 +7,7 @@ import TopEmployerGame from './TopEmployerGame';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App full-screen">
         <div className="App-layout">
           <div>
             <Routes>
