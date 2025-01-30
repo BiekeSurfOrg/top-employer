@@ -3,7 +3,7 @@ import { useRouteChange } from './navigation';
 const buttons = [{ a: 1375, b: 570 }, { a: 260, b: 1780 }, { a: 265, b: 2240 }, { a: 1740, b: 1440 }, { a: 1910, b: 850 }];
 const TopEmployerGame = () => {
     const [awardsFround, setAwardsFound] = React.useState([false, false, false, false, false]);
-    const timeOut = 30000;
+    const timeOut = 180000;
     let lastInteractedWith = Date.now();
     console.log(awardsFround);
     const routeChange = useRouteChange();
