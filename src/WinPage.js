@@ -11,7 +11,7 @@ const WinPage = () => {
     reRouteAfter3Seconds();
     return (
         <div className='full-screen layout position-relative'>
-            <img src='../assets/confetti.gif' className='background-video' />
+            <img src='../assets/winner.gif' className='background-video' />
             <div>
                 <h1>We won</h1>
                 <h1>So did you</h1>
