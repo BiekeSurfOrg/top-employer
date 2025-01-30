@@ -3,14 +3,30 @@ import { useRouteChange } from './navigation';
 const buttons = [{ a: 1375, b: 570 }, { a: 260, b: 1780 }, { a: 265, b: 2240 }, { a: 1740, b: 1440 }, { a: 1910, b: 850 }];
 const TopEmployerGame = () => {
     const [awardsFround, setAwardsFound] = React.useState([false, false, false, false, false]);
+    const timeOut = 30000;
+    let lastInteractedWith = Date.now();
     console.log(awardsFround);
     const routeChange = useRouteChange();
-    const reRouteAfter3Minutes = () => {
+
+    const chronJob = () => {
         setTimeout(() => {
-            routeChange('/');
-        }, 180000);
-    }
-    reRouteAfter3Minutes();
+            if (Date.now() - lastInteractedWith >= timeOut) {
+                routeChange('/');
+            } else {
+                chronJob();
+            }
+        }, 5000);
+    };
+
+    const interaction = () => {
+        console.log('interaction');
+
+        lastInteractedWith = Date.now();
+        console.log(lastInteractedWith);
+
+    };
+    chronJob();
+
     const refreshscore = () => {
         setAwardsFound([false, false, false, false, false]);
         const buttons = document.getElementsByClassName('top-employer-button');
@@ -35,7 +51,7 @@ const TopEmployerGame = () => {
         currentButton.disabled = true;
     }
     return (
-        <div className='full-screen position-relative'>
+        <div onClick={() => interaction()} className='full-screen position-relative'>
             <img src='../assets/Topemployer-search.webp' className='background-video'></img>
             <h1>Top Employer Game</h1>
             <div className='z-index-1'>

@@ -6,7 +6,7 @@ const WinPage = () => {
     const reRouteAfter3Seconds = () => {
         setTimeout(() => {
             routeChange('/');
-        }, 3000);
+        }, 5000);
     }
     reRouteAfter3Seconds();
     return (
