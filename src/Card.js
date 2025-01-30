@@ -5,7 +5,7 @@ const Card = ({ text, route, img }) => {
     const routeChange = useRouteChange();
     return (
         <div className="card" onClick={() => routeChange(route)}>
-            <img src={`../assets/${img}.png`} className="tile-image" />
+            <img src={`../assets/${img}.webp`} className="tile-image" />
             <div className="tile-description-area">
                 <span className="tile-description"> {text}</span>
             </div>

@@ -30,7 +30,7 @@ const TopEmployerGame = () => {
     }
     return (
         <div className='full-screen position-relative'>
-            <img src='../assets/Topemployer-search.jpg' className='background-video'></img>
+            <img src='../assets/Topemployer-search.webp' className='background-video'></img>
             <h1>Top Employer Game</h1>
             <div className='z-index-1'>
                 <div className='award-found-container'>
