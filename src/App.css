@@ -227,3 +227,9 @@
   margin: 20px;
   z-index: 1;
 }
+
+.won-text {
+  color: black;
+  font-size: 200px;
+  margin-bottom: 600px;
+}

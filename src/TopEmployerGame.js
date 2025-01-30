@@ -5,6 +5,12 @@ const TopEmployerGame = () => {
     const [awardsFround, setAwardsFound] = React.useState([false, false, false, false, false]);
     console.log(awardsFround);
     const routeChange = useRouteChange();
+    const reRouteAfter3Minutes = () => {
+        setTimeout(() => {
+            routeChange('/');
+        }, 180000);
+    }
+    reRouteAfter3Minutes();
     const refreshscore = () => {
         setAwardsFound([false, false, false, false, false]);
         const buttons = document.getElementsByClassName('top-employer-button');
@@ -34,11 +40,11 @@ const TopEmployerGame = () => {
             <h1>Top Employer Game</h1>
             <div className='z-index-1'>
                 <div className='award-found-container'>
-                    <img className='action-icon' src='../assets/action-func-chevron-left.png' onClick={() => routeChange("/")} />
+                    <img className='action-icon' src='../assets/action-func-chevron-left.webp' onClick={() => routeChange("/")} />
                     <div className='awards-found'>
-                        {awardsFround.map((award, index) => (<img key={index} className='award-image' src={`../assets/${award ? 'red' : 'grey'}_logo.png`} alt="award" />))}
+                        {awardsFround.map((award, index) => (<img key={index} className='award-image' src={`../assets/${award ? 'red' : 'grey'}_logo.webp`} alt="award" />))}
                     </div>
-                    <img className='action-icon' src='../assets/refresh-1024-738176988.png' onClick={() => refreshscore()} />
+                    <img className='action-icon' src='../assets/refresh-1024-738176988.webp' onClick={() => refreshscore()} />
                 </div>
                 <div className="position-relative">
                     {buttons.map((button, index) => (
