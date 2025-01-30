@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouteChange } from './navigation';
-const buttons = [{ a: 1375, b: 590 }, { a: 270, b: 1800 }, { a: 270, b: 2250 }, { a: 1740, b: 1440 }, { a: 1910, b: 850 }];
+const buttons = [{ a: 1375, b: 570 }, { a: 260, b: 1780 }, { a: 265, b: 2240 }, { a: 1740, b: 1440 }, { a: 1910, b: 850 }];
 const TopEmployerGame = () => {
     const [awardsFround, setAwardsFound] = React.useState([false, false, false, false, false]);
     console.log(awardsFround);
