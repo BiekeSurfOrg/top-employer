@@ -13,7 +13,9 @@ const WinPage = () => {
         <div className='full-screen layout position-relative'>
             <img src='../assets/winner.gif' className='background-video' />
             <div>
-                <p className='won-text'>We won ! <br /><br /> So did you ! </p>
+                <p className='won-text'>Top, you won! <br /><br /> So did we... </p>
+                <br/>
+                <img className='award-image' src='../assets/red_logo.webp'/>
             </div>
         </div>
     );
