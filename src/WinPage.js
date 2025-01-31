@@ -14,8 +14,8 @@ const WinPage = () => {
             <img src='../assets/winner.gif' className='background-video' />
             <div>
                 <p className='won-text'>Top, you won! <br /><br /> So did we... </p>
-                <br/>
-                <img className='award-image' src='../assets/red_logo.webp'/>
+                <br />
+                <img className='win-image' src='../assets/red_logo.webp' />
             </div>
         </div>
     );
