@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteChange } from './navigation';
-
+import { updateViews } from './updateViews';
+const page = 'image';
 const FullScreenImage = () => {
     const routeChange = useRouteChange();
     const reRouteAfter3Seconds = () => {
@@ -8,6 +9,7 @@ const FullScreenImage = () => {
             routeChange('/');
         }, 180000);
     }
+    updateViews(page);
     reRouteAfter3Seconds();
     return (
         <div className='full-screen layout position-relative'>

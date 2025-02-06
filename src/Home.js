@@ -1,8 +1,21 @@
 import React from 'react';
 import Card from './Card';
-
+import axios from 'axios';
 const Home = () => {
+    const project_name = "top-employer";
+    const API_URL = process.env.REACT_APP_API_ENDPOINT
+    const fetchWithAxios = async () => {
+        try {
+            const response = await axios.post(API_URL + '/projects/' + project_name, {
+                pages: ["video", "top-employer-game", "image", "win-page"]
+            });
+            console.log(response.data);
 
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    fetchWithAxios();
     return (
         <div className="full-screen position-relative">
             <video autoPlay muted loop id="myVideo" className='background-video'>
@@ -18,5 +31,4 @@ const Home = () => {
         </div>
     );
 };
-
 export default Home;

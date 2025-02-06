@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouteChange } from './navigation';
-
+import { updateViews } from './updateViews';
+const page = 'win-page';
 const WinPage = () => {
     const routeChange = useRouteChange();
     const reRouteAfter3Seconds = () => {
@@ -9,6 +10,8 @@ const WinPage = () => {
         }, 5000);
     }
     reRouteAfter3Seconds();
+    updateViews(page);
+
     return (
         <div className='full-screen layout position-relative'>
             <img src='../assets/winner.gif' className='background-video' />
