@@ -160,6 +160,17 @@
   position: relative;
 }
 
+.position-absolute {
+  position: absolute;
+}
+
+.click-here {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
+  top: -220px;
+}
+
 .background-video {
   position: absolute;
   top: 0;

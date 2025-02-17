@@ -22,7 +22,8 @@ const Home = () => {
                 <source src="../assets/Top_Employer_comehere2160x3840.mp4" type="video/mp4" />
             </video>
             <div className="full-screen layout">
-                <div className='tile-list'>
+                <div className='tile-list position-relative'>
+                    <h3 className='position-absolute click-here'>Click Here</h3>
                     <Card text='We won… again…' route='/full-screen-video' img={'button1'} />
                     <Card text='Find the awards-game' route='/top-employer-game' img={'button2'} />
                     <Card text='Why we won...' route='/full-screen-image' img={'button3'} />
